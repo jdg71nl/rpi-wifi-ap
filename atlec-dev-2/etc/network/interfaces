@@ -1,0 +1,47 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+
+# Please note that this file is written to be used with dhcpcd
+# For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'
+
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+# JDG: auto is slow!
+#auto eth0
+allow-hotplug eth0
+#iface eth0 inet dhcp
+iface eth0 inet static
+	address 10.77.66.1
+	netmask 255.255.255.0
+	gateway 10.77.66.254
+	dns-servers 10.77.66.254
+	#address 192.168.178.199
+	#netmask 255.255.255.0
+	#gateway 192.168.178.1
+	#dns-servers 8.8.8.8
+	#dns-servers 193.70.42.208 5.157.83.103
+#
+
+allow-hotplug wlan0
+iface wlan0 inet static
+	address 10.77.10.254
+	netmask 255.255.255.0
+#
+#iface wlan0 inet dhcp
+	#wpa-ssid "LB21 Password"
+	#wpa-psk "kat83brok14"
+	#wpa-ssid "Puntjesberg366"
+	#wpa-psk "ToverPunt38"
+	#address 10.21.82.141
+	#netmask 255.255.255.0
+	#gateway 10.21.82.254
+	#dns-servers 193.70.42.208 5.157.83.103
+#
+
+allow-hotplug wlan1
+iface wlan1 inet static
+	address 10.77.11.254
+	netmask 255.255.255.0
+#
+
+#-EOF

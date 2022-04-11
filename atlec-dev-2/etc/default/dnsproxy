@@ -1,0 +1,12 @@
+# Defaults for dnsproxy initscript
+# sourced by /etc/init.d/dnsproxy
+# installed at /etc/default/dnsproxy by the maintainer scripts
+
+# dnsproxy will not start if this option is set to to false.
+# If you installed dnsproxy for the first time, please have a look at
+# /usr/share/doc/dnsproxy/README.Debian
+#
+#jdg
+#RUN_DNSPROXY="false"
+RUN_DNSPROXY="true"
+#-EOF
