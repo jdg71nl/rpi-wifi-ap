@@ -11,8 +11,9 @@
 # file can be found at /usr/share/doc/hostapd/examples/hostapd.conf.gz
 #
 #DAEMON_CONF=""
-#jdg
-DAEMON_CONF="/etc/hostapd/hostapd.conf"
+#jdg, also do: sudo systemctl unmask hostapd.service , and: sudo systemctl enable hostapd.service
+#DAEMON_CONF="/etc/hostapd/hostapd.conf"
+DAEMON_CONF="/etc/hostapd/wlan0.conf"
 
 # Additional daemon options to be appended to hostapd command:-
 # 	-d   show more debug messages (-dd for even more)
